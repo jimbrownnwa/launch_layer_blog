@@ -1,0 +1,10 @@
+# Database
+blog.db
+
+# IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
