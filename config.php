@@ -2,14 +2,14 @@
 // Blog Configuration
 
 // Claude API
-define('CLAUDE_API_KEY', getenv('CLAUDE_API_KEY') ?: '');
+define('CLAUDE_API_KEY', getenv('CLAUDE_API_KEY') !== false ? getenv('CLAUDE_API_KEY') : '');
 define('CLAUDE_MODEL', 'claude-sonnet-4-5-20250929');
 
 // Amazon Affiliate
-define('AMAZON_AFFILIATE_TAG', getenv('AMAZON_AFFILIATE_TAG') ?: '');
+define('AMAZON_AFFILIATE_TAG', getenv('AMAZON_AFFILIATE_TAG') !== false ? getenv('AMAZON_AFFILIATE_TAG') : '');
 
 // Cron job security token (32 hex characters)
-define('CRON_TOKEN', getenv('CRON_TOKEN') ?: '');
+define('CRON_TOKEN', getenv('CRON_TOKEN') !== false ? getenv('CRON_TOKEN') : '');
 
 // Blog Settings
 define('BLOG_TITLE', 'Launch Layer Blog');
