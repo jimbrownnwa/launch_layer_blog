@@ -21,8 +21,9 @@ define('BLOG_TITLE', 'Launch Layer Blog');
 define('BLOG_DESCRIPTION', 'Established Principles, Frameworks & Solutions for Small Business');
 define('POSTS_PER_PAGE', 10);
 
-// Database
-define('DB_PATH', __DIR__ . '/blog.db');
+// Database - use mounted volume in production, local dir in development
+$dbDir = is_dir('/app/data') ? '/app/data' : __DIR__;
+define('DB_PATH', $dbDir . '/blog.db');
 
 // Testing mode (5 min interval) vs Production (daily)
 define('TESTING_MODE', true);
